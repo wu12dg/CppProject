@@ -1,7 +1,27 @@
 ﻿#include <iostream>
 using namespace std;
 #include<string>
-class Teacher {
+class Person {
+protected:
+	string name;
+	int age;
+	char sex;
+public:
+	Person(string n, int a, char s) {
+		name = n;
+		age = a;
+		sex = s;
+	}
+};
+class Teacher :virtual public Person {
+protected:
+	string title;
+public:
+	Teacher() {
+
+	}
+};
+/*class Teacher {
 protected:
 	string name;
 	int age;
@@ -35,11 +55,11 @@ public:
 		cout << "姓名：" << name << "\n 年龄：" << age << "\n 职称：" << title << "\n 性别：" << sex << "\n 分数:" << score << "\n 津贴" << wage << endl;
 	}
 };
-
+*/
 int main()
 {
-	Graduate gra1( "张三", 21, "讲师", 'M', 92.5f, 1000);
-	gra1.show();
+	//Graduate gra1( "张三", 21, "讲师", 'M', 92.5f, 1000);
+	//gra1.show();
 
 	return 0;
 }
