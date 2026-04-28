@@ -40,7 +40,7 @@ public:
 
 int main()
 {
-
+	Graduate gra1("张三", 21, "讲师", "M",  92.5f, 1000);
 
 
 	return 0;
