@@ -17,9 +17,16 @@ class Teacher :virtual public Person {
 protected:
 	string title;
 public:
-	Teacher() {
-
+	Teacher(string n, int a, char s, string t):Person(n,a,s){
+		title = t;
 	}
+};
+class Student :virtual public Person {
+protected:
+	float score;
+public: 
+	Student(string n,int a,char s,float sc):Person(n,a,s),score(sc){}
+
 };
 /*class Teacher {
 protected:
@@ -45,21 +52,21 @@ public:
 		score = sc;
 	}
 
-};
+};*/
 class Graduate :public Teacher, public Student {
 protected:
 	int wage;
 public:
-	Graduate(string n, int a, string t, char s, float sc,int w):Teacher(n,a,t),Student(s,sc),wage(w){}
+	Graduate(string n,int a,char s,float sc,int w):Person(n,a,s),Teacher(n,a,s,t),Student(n,a,s,sc),wage(w){}
+
 	void show() {
 		cout << "姓名：" << name << "\n 年龄：" << age << "\n 职称：" << title << "\n 性别：" << sex << "\n 分数:" << score << "\n 津贴" << wage << endl;
 	}
 };
-*/
 int main()
 {
-	//Graduate gra1( "张三", 21, "讲师", 'M', 92.5f, 1000);
-	//gra1.show();
+	Graduate gra1( "张三", 21, "讲师", 'M', 92.5f, 1000);
+	gra1.show();
 
 	return 0;
 }
