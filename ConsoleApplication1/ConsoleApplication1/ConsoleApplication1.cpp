@@ -18,19 +18,24 @@ class Student {
 protected:
 	char sex;
 	string name1;
-	int score;
+	float score;
 
 public:
-	Student(char s,string n1,int sc) {
+	Student(char s,string n1,float sc) {
 		sex = s;
 		name1 = n1;
 		score = sc;
 	}
 
-};//jkgkgk
-class Draduate :public Teacher, public Student {
+};
+class Graduate :public Teacher, public Student {
 protected:
+	int wage;
 public:
+	Graduate(string n, int a, string t, char s, string n1, float sc,int w):Teacher(n,a,t),Student(s,n1,sc),wage(w){}
+	void show() {
+		cout << "姓名：" << name << "\n 年龄：" << age << "\n 职称：" << title << "\n 性别：" << sex << "\n 分数:" << score << "\n 津贴" << wage << endl;
+	}
 };
 
 int main()
