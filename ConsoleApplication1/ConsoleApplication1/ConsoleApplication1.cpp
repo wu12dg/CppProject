@@ -27,7 +27,7 @@ public:
 		score = sc;
 	}
 
-};
+};//jkgkgk
 class Draduate :public Teacher, public Student {
 protected:
 public:
