@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ConsoleApplication0512t/ConsoleApplication0512t.vcxproj" />
+  <Project Path="HW060512/HW060512.vcxproj" />
 </Solution>
