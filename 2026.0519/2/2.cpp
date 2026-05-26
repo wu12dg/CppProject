@@ -11,6 +11,7 @@ int main()
     cout << left << setw(10) << "Name" << "Age" << endl;
     cout << left << setw(10) << "Tom" << 18 << endl;
     cout.put('h').put('i');
+    cout << endl;
     cout.write("helllll,ejf", 5);
     return 0;
 }
